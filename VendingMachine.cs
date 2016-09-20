@@ -5,15 +5,22 @@ namespace VendingMachineKata
 {
 	class VendingMachine
 	{
-		Dictionary<KeyValuePair<int,int>, decimal> ValidCoins = new Dictionary<KeyValuePair<int, int>, decimal> () {
-			{ new KeyValuePair<int, int> (2, 2), .10M },
-			{ new KeyValuePair<int, int> (3, 3), .05M },
-			{ new KeyValuePair<int, int> (5, 5), .25M },
+		public decimal Amount { get; private set; }
+
+		Dictionary<string, decimal> ValidCoins = new Dictionary<string, decimal> () {
+			{ "2|2", .10M },
+			{ "3|3", .05M },
+			{ "5|5", .25M },
 		};
+
+		public VendingMachine ()
+		{
+			this.Amount = 0.0M;
+		}
 
 		public bool Insert (Coin c)
 		{
-			if (ValidCoins.ContainsKey (new KeyValuePair<int,int> (c.Size, c.Weight)))
+			if (ValidCoins.ContainsKey (c.Size + "|" + c.Weight))
 				return true;
 			
 			return false;
@@ -21,7 +28,18 @@ namespace VendingMachineKata
 
 		static void Main (string[] args)
 		{
-			Console.WriteLine ("YAY");
+			VendingMachine v = new VendingMachine ();
+			while (true) {
+				Console.WriteLine ("INSERT COIN (format: size|weight)");
+				string input = Console.ReadLine ();
+				if (input == "q") {
+					break;
+				}
+
+				if (v.Insert (new Coin (input))) {
+					
+				}
+			}
 		}
 	}
 }

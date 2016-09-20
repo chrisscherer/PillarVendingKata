@@ -20,10 +20,17 @@ namespace VendingMachineKata
 
 		public bool Insert (Coin c)
 		{
-			if (ValidCoins.ContainsKey (c.Size + "|" + c.Weight))
+			if (ValidCoins.ContainsKey (c.Size + "|" + c.Weight)) {
+				//AddAmount (ValidCoins [c.Size + "|" + c.Weight]);
 				return true;
+			}
 			
 			return false;
+		}
+
+		private void AddAmount (decimal d)
+		{
+			Amount += d;
 		}
 
 		static void Main (string[] args)
@@ -37,7 +44,9 @@ namespace VendingMachineKata
 				}
 
 				if (v.Insert (new Coin (input))) {
-					
+					Console.WriteLine ("Amount: $" + v.Amount);
+				} else {
+					Console.WriteLine (new Coin (input));
 				}
 			}
 		}

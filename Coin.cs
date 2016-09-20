@@ -13,14 +13,21 @@ namespace VendingMachineKata
 			int size;
 			int weight;
 
-			string[] sw = s.Split ('|');
-			if (int.TryParse (sw [0], out size)) {
-				if (int.TryParse (sw [1], out weight)) {
-					Initialize (size, weight);
-				}
-			}
+			bool valid = true;
 
-			Initialize (0, 0);
+			string[] sw = s.Split ('|');
+			if (!int.TryParse (sw [0], out size)) {
+				valid = false;
+			} 
+			if (!int.TryParse (sw [1], out weight)) {
+				valid = false;
+			} 
+
+			if (valid) {
+				Initialize (size, weight);
+			} else {
+				Initialize (0, 0);
+			}
 		}
 
 		public Coin (int size, int weight)

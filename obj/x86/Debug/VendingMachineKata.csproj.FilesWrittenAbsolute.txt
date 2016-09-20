@@ -1,6 +1,6 @@
-/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
-/Users/christopherscherer/Projects/VendingMachineKata/bin/Debug/VendingMachineKata.exe.mdb
-/Users/christopherscherer/Projects/VendingMachineKata/bin/Debug/VendingMachineKata.exe
-/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/VendingMachineKata.exe
-/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/VendingMachineKata.exe.mdb
+/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/christopherscherer/Projects/VendingMachineKata/bin/Debug/VendingMachineKata.dll.mdb
+/Users/christopherscherer/Projects/VendingMachineKata/bin/Debug/VendingMachineKata.dll
+/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/VendingMachineKata.dll
+/Users/christopherscherer/Projects/VendingMachineKata/obj/x86/Debug/VendingMachineKata.dll.mdb
+/Users/christopherscherer/Projects/VendingMachineKata/bin/Debug/nunit.framework.dll

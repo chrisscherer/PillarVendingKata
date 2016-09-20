@@ -38,7 +38,7 @@ namespace VendingMachineKata
 		public void AmountOnInsertQuarter ()
 		{
 			Coin c = new Coin (5, 5);
-			//v.Insert (c);
+			v.Insert (c);
 
 			Assert.AreEqual (.25M, v.Amount);
 		}

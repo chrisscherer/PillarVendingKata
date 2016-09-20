@@ -21,7 +21,7 @@ namespace VendingMachineKata
 		public bool Insert (Coin c)
 		{
 			if (ValidCoins.ContainsKey (c.Size + "|" + c.Weight)) {
-				//AddAmount (ValidCoins [c.Size + "|" + c.Weight]);
+				AddAmount (ValidCoins [c.Size + "|" + c.Weight]);
 				return true;
 			}
 			

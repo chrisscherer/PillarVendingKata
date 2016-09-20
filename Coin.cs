@@ -14,17 +14,18 @@ namespace VendingMachineKata
 			int weight;
 
 			bool valid = true;
+			if (s.Length >= 3) {
+				string[] sw = s.Split ('|');
+				if (!int.TryParse (sw [0], out size)) {
+					valid = false;
+				} 
+				if (!int.TryParse (sw [1], out weight)) {
+					valid = false;
+				} 
 
-			string[] sw = s.Split ('|');
-			if (!int.TryParse (sw [0], out size)) {
-				valid = false;
-			} 
-			if (!int.TryParse (sw [1], out weight)) {
-				valid = false;
-			} 
-
-			if (valid) {
-				Initialize (size, weight);
+				if (valid) {
+					Initialize (size, weight);
+				}
 			} else {
 				Initialize (0, 0);
 			}

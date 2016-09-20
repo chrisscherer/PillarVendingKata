@@ -24,7 +24,6 @@ namespace VendingMachineKata
 				AddAmount (ValidCoins [c.Size + "|" + c.Weight]);
 				return true;
 			}
-			
 			return false;
 		}
 
@@ -44,9 +43,9 @@ namespace VendingMachineKata
 				}
 
 				if (v.Insert (new Coin (input))) {
-					Console.WriteLine ("Amount: $" + v.Amount);
+					Console.WriteLine ("AMOUNT: $" + v.Amount);
 				} else {
-					Console.WriteLine (new Coin (input));
+					Console.WriteLine ("PLEASE CHECK COIN RETURN!");
 				}
 			}
 		}

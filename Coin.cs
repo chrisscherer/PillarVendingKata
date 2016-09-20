@@ -4,13 +4,14 @@ namespace VendingMachineKata
 {
 	public class Coin
 	{
-		int size;
-		int weight;
+		public int Size { get; private set; }
+
+		public int Weight { get; private set; }
 
 		public Coin (int size, int weight)
 		{
-			this.size = size;
-			this.weight = weight;
+			this.Size = size;
+			this.Weight = weight;
 		}
 	}
 }

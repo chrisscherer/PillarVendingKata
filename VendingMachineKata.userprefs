@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="VendingMachineKata.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VendingMachineTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VendingMachine.cs">
     <Files>
-      <File FileName="VendingMachine.cs" Line="1" Column="1" />
-      <File FileName="VendingMachineTests.cs" Line="3" Column="1" />
+      <File FileName="VendingMachine.cs" Line="24" Column="30" />
+      <File FileName="VendingMachineTests.cs" Line="1" Column="1" />
+      <File FileName="Coin.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">

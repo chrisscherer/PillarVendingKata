@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{39339A1D-F397-4F1D-B790-95B0EBBBECD5}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>VendingMachineKata</RootNamespace>
     <AssemblyName>VendingMachineKata</AssemblyName>
   </PropertyGroup>

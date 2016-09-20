@@ -25,5 +25,13 @@ namespace VendingMachineKata
 
 			Assert.AreEqual (true, v.Insert (c));
 		}
+
+		[Test]
+		public void InsertInvalidCoin ()
+		{
+			Coin c = new Coin (1, 1);
+
+			Assert.AreEqual (false, v.Insert (c));
+		}
 	}
 }

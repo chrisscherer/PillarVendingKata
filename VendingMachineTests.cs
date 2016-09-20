@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace VendingMachineKata
 {
-	[TestFixture ()]
+	[TestFixture]
 	public class VendingMachineTests
 	{
 		VendingMachine v;
@@ -18,10 +18,12 @@ namespace VendingMachineKata
 			v = null;
 		}
 
-		[Test ()]
-		public void when ()
+		[Test]
+		public void InsertValidCoin ()
 		{
-			Assert.AreEqual (0, 0);
+			Coin c = new Coin (5, 5);
+
+			Assert.AreEqual (true, v.Insert (c));
 		}
 	}
 }

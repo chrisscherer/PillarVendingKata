@@ -42,5 +42,8 @@ namespace VendingMachineKata
 
 			Assert.AreEqual (.25M, v.Amount);
 		}
+
+		//		[Test]
+		//		public void
 	}
 }

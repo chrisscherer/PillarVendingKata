@@ -35,11 +35,20 @@ namespace VendingMachineKata
 		static void Main (string[] args)
 		{
 			VendingMachine v = new VendingMachine ();
+
+			Console.WriteLine ("Enter -h for help!");
+
 			while (true) {
 				Console.WriteLine ("INSERT COIN (format: size|weight)");
 				string input = Console.ReadLine ();
 				if (input == "q") {
 					break;
+				} else if (input == "-h") {
+					Console.WriteLine ("Usage:  ");
+					Console.WriteLine (" options:  ");
+					Console.WriteLine ("   -cr, display coin return contents.");
+					Console.WriteLine ("   -p, --id List products and if given an id, attempt to purchase one.");
+					Console.WriteLine ("   size|weight, Entering a size and weight in this format will insert a coin.");
 				}
 
 				if (v.Insert (new Coin (input))) {

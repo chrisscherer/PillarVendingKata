@@ -40,7 +40,9 @@ namespace VendingMachineKata
 
 			while (true) {
 				Console.WriteLine ("INSERT COIN (format: size|weight)");
+
 				string input = Console.ReadLine ();
+
 				if (input == "q") {
 					break;
 				} else if (input == "-h") {
@@ -49,9 +51,7 @@ namespace VendingMachineKata
 					Console.WriteLine ("   -cr, display coin return contents.");
 					Console.WriteLine ("   -p, --id List products and if given an id, attempt to purchase one.");
 					Console.WriteLine ("   size|weight, Entering a size and weight in this format will insert a coin.");
-				}
-
-				if (v.Insert (new Coin (input))) {
+				} else if (v.Insert (new Coin (input))) {
 					Console.WriteLine ("AMOUNT: $" + v.Amount);
 				} else {
 					Console.WriteLine ("PLEASE CHECK COIN RETURN!");

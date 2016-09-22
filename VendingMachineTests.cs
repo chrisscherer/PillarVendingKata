@@ -43,7 +43,12 @@ namespace VendingMachineKata
 			Assert.AreEqual (.25M, v.Amount);
 		}
 
-		//		[Test]
-		//		public void
+		[Test]
+		public void OnCheckingCoinReturn ()
+		{
+			double d = v.CheckCoinReturn ();
+
+			Assert.AreEqual (0M, d);
+		}
 	}
 }

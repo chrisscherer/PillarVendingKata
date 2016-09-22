@@ -72,5 +72,12 @@ namespace VendingMachineKata
 
 			Assert.AreEqual (0.0M, d);
 		}
+
+		[Test]
+		public void InsufficientAmountForPurchase ()
+		{
+			bool success = v.Purchase (1);
+			Assert.AreEqual (false, success);
+		}
 	}
 }

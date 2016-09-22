@@ -109,5 +109,21 @@ namespace VendingMachineKata
 			v.Purchase (1);
 			Assert.AreEqual (0.00M, v.Amount);
 		}
+
+		//I saw the previous format of test naming on the nunit site, but it's getting hard to write descriptive test names
+		//and I'm going back to the way I originally learned how to write them.
+		//This is partially due to the lack (or my percieved lack of) a Given, When, Then test structure.
+		[Test]
+		public void OnSuccessfulItemPurchaseLeftoverCoinsAreReturned ()
+		{
+			Coin c = new Coin (5, 5);
+
+			v.Insert (c);
+			v.Insert (c);
+			v.Insert (c);
+
+			v.Purchase (3);
+			Assert.AreEqual (0.15M, v.ReturnAmount);
+		}
 	}
 }

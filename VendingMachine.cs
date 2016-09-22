@@ -27,6 +27,11 @@ namespace VendingMachineKata
 			return false;
 		}
 
+		public double CheckCoinReturn ()
+		{
+			return 0.0;
+		}
+
 		private void AddAmount (decimal d)
 		{
 			Amount += d;

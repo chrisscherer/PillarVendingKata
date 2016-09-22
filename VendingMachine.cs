@@ -7,6 +7,8 @@ namespace VendingMachineKata
 	{
 		public decimal Amount { get; private set; }
 
+		public decimal ReturnAmount { get; private set; }
+
 		Dictionary<string, decimal> ValidCoins = new Dictionary<string, decimal> () {
 			{ "2|2", .10M },
 			{ "3|3", .05M },
@@ -16,6 +18,7 @@ namespace VendingMachineKata
 		public VendingMachine ()
 		{
 			this.Amount = 0.0M;
+			this.ReturnAmount = 0.0M;
 		}
 
 		public bool Insert (Coin c)
@@ -27,9 +30,15 @@ namespace VendingMachineKata
 			return false;
 		}
 
-		public double CheckCoinReturn ()
+		public void ReturnCoins ()
 		{
-			return 0.0;
+			this.ReturnAmount = this.Amount;
+			this.Amount = 0.0M;
+		}
+
+		public decimal CheckCoinReturn ()
+		{
+			return this.ReturnAmount;
 		}
 
 		private void AddAmount (decimal d)

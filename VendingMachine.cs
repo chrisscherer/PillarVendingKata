@@ -79,18 +79,26 @@ namespace VendingMachineKata
 			while (true) {
 				Console.WriteLine ("INSERT COIN (format: size|weight)");
 
-				string input = Console.ReadLine ();
+				string[] input = Console.ReadLine ().Split (' ');
 
-				if (input == "q") {
+				if (input [0] == "q") {
 					break;
-				} else if (input == "-h") {
+				} else if (input [0] == "-h") {
 					Console.WriteLine ("Usage:  ");
 					Console.WriteLine (" options:  ");
 					Console.WriteLine ("   -cr, display coin return contents.");
-					Console.WriteLine ("   -p, --id List products and if given an id, attempt to purchase one.");
-					Console.WriteLine ("   size|weight, Entering a size and weight in this format will insert a coin.");
-				} else if (v.Insert (new Coin (input))) {
-					Console.WriteLine ("AMOUNT: $" + v.Amount);
+					Console.WriteLine ("   -p, id List products and if given an id, attempt to purchase one.");
+					Console.WriteLine ("   -i, size|weight, Entering a size and weight in this format will insert a coin.");
+				} else if (input [0] == "-cr") {
+					Console.WriteLine ("COIN RETURN AMOUNT: $" + v.CheckCoinReturn ());
+				} else if (input [0] == "-p") {
+					for (int i = 1; i <= v.Products.Count; i++) {
+						Console.WriteLine (v.Products [i].Key + ": $" + v.Products [i].Value);
+					}
+				} else if (input [0] == "-i") {
+					if (v.Insert (new Coin (input [1]))) {
+						Console.WriteLine ("AMOUNT: $" + v.Amount);
+					}
 				} else {
 					Console.WriteLine ("PLEASE CHECK COIN RETURN!");
 				}

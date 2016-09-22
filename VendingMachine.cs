@@ -49,6 +49,11 @@ namespace VendingMachineKata
 			return moneyToReturn;
 		}
 
+		public bool Purchase (int id)
+		{
+			return false;
+		}
+
 		private void AddAmount (decimal d)
 		{
 			Amount += d;

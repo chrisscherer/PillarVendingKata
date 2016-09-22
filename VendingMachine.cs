@@ -77,17 +77,17 @@ namespace VendingMachineKata
 		{
 			VendingMachine v = new VendingMachine ();
 
-			Console.WriteLine ("Enter -h for help!");
 
 			while (true) {
-				Console.WriteLine ("INSERT COIN (format: size|weight)");
+				Console.WriteLine ("Enter -h for help!");
+				Console.WriteLine ("INSERT COIN");
 
 				string[] input = Console.ReadLine ().Split (' ');
 
 				if (input [0] == "q") {
 					break;
 				} else if (input [0] == "-h") {
-					Console.WriteLine ("Usage:  ");
+					Console.WriteLine ("Usage: Basic Vending Machine App for vending things out of a machine! ");
 					Console.WriteLine (" options:  ");
 					Console.WriteLine ("   -cr, display coin return contents.");
 					Console.WriteLine ("   -p, id List products and if given an id, attempt to purchase one.");
@@ -105,6 +105,7 @@ namespace VendingMachineKata
 				} else {
 					Console.WriteLine ("PLEASE CHECK COIN RETURN!");
 				}
+				Console.WriteLine (" ");
 			}
 		}
 	}

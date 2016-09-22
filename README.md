@@ -7,6 +7,8 @@ nunit-console VendingMachineTests.cs(i think) -run:VendingMachineTests.TestName.
 
 I'll keep looking for other solutions but I don't currently have a way to run the tests from a command line.
 
+
+
 Thoughts:
 
 In the case where there are multiple similar test cases (different coin sizes/weights) that all use the same code path, is it worth testing each one to make sure it works? The code, to me at least, is self explanatory in that any case covered by the dictionary will return true and anything outside that will return false. This seems like valid coverage to me, but is test coverage more about me validating my code or someone else knowing that every base is covered?

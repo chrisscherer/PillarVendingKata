@@ -57,8 +57,10 @@ namespace VendingMachineKata
 
 		public bool Purchase (int id)
 		{
-			if (Products.ContainsKey (id) && this.Amount >= Products [id].Value)
+			if (Products.ContainsKey (id) && this.Amount >= Products [id].Value) {
+				this.AddAmount (Products [id].Value * -1);
 				return true;
+			}
 			
 			return false;
 		}

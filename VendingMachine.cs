@@ -59,6 +59,7 @@ namespace VendingMachineKata
 		{
 			if (Products.ContainsKey (id) && this.Amount >= Products [id].Value) {
 				this.AddAmount (Products [id].Value * -1);
+				this.ReturnCoins ();
 				Console.WriteLine ("THANK YOU");
 				return true;
 			} else if (Products.ContainsKey (id)) {

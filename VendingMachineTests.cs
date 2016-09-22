@@ -123,7 +123,7 @@ namespace VendingMachineKata
 			v.Insert (c);
 
 			v.Purchase (3);
-			Assert.AreEqual (0.15M, v.ReturnAmount);
+			Assert.AreEqual (0.10M, v.ReturnAmount);
 		}
 	}
 }

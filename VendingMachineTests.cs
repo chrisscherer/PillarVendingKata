@@ -60,5 +60,17 @@ namespace VendingMachineKata
 			decimal d = v.CheckCoinReturn ();
 			Assert.AreEqual (.25M, d);
 		}
+
+		[Test]
+		public void TakeCoinsFromReturn ()
+		{
+			Coin c = new Coin (5, 5);
+			v.Insert (c);
+			v.ReturnCoins ();
+			v.TakeReturnedCoins ();
+			decimal d = v.CheckCoinReturn ();
+
+			Assert.AreEqual (0.0M, d);
+		}
 	}
 }

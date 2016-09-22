@@ -93,5 +93,21 @@ namespace VendingMachineKata
 			bool success = v.Purchase (1);
 			Assert.AreEqual (true, success);
 		}
+
+		[Test]
+		public void SuccessfulItemPurchaseAmountUpdated ()
+		{
+			Coin c = new Coin (5, 5);
+
+			v.Insert (c);
+			v.Insert (c);
+			v.Insert (c);
+			v.Insert (c);
+
+			Assert.AreEqual (1.00M, v.Amount);
+
+			v.Purchase (1);
+			Assert.AreEqual (0.00M, v.Amount);
+		}
 	}
 }

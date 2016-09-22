@@ -1,6 +1,9 @@
 # PillarVendingKata
 Vending machine kata done in c#
 
+I'm developing on a mac at the moment so I'm compiling using mono. I haven't yet found a way to run tests from command line but on windows it's apparently just nunit-console VendingMachineTests.cs(i think) -run:VendingMachineTests.TestName.
+
+I'll keep looking for other solutions but I don't currently have a way to run the tests from a command line.
 
 Thoughts:
 

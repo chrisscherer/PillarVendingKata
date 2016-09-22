@@ -41,6 +41,14 @@ namespace VendingMachineKata
 			return this.ReturnAmount;
 		}
 
+		public decimal TakeReturnedCoins ()
+		{
+			//Called moneyToReturn for clarification against ReturnAmount
+			decimal moneyToReturn = this.ReturnAmount;
+			this.ReturnAmount = 0.0M;
+			return moneyToReturn;
+		}
+
 		private void AddAmount (decimal d)
 		{
 			Amount += d;

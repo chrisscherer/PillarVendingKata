@@ -15,6 +15,12 @@ namespace VendingMachineKata
 			{ "5|5", .25M },
 		};
 
+		Dictionary<int, KeyValuePair<string, decimal>> Products = new Dictionary<int, KeyValuePair<string,decimal>> () {
+			{ 1, new KeyValuePair<string, decimal> ("Cola", 1.00M) },
+			{ 2, new KeyValuePair<string, decimal> ("Chips", 0.50M) },
+			{ 3, new KeyValuePair<string, decimal> ("Candy", 0.65M) },
+		};
+
 		public VendingMachine ()
 		{
 			this.Amount = 0.0M;
@@ -51,6 +57,9 @@ namespace VendingMachineKata
 
 		public bool Purchase (int id)
 		{
+			if (Products.ContainsKey (id) && this.Amount >= Products [id].Value)
+				return true;
+			
 			return false;
 		}
 
